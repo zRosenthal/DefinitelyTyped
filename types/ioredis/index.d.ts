@@ -452,6 +452,8 @@ declare namespace IORedis {
     }
 
     interface Pipeline {
+        length: number;
+        
         bitcount(key: string, callback?: (err: Error, res: number) => void): Pipeline;
         bitcount(key: string, start: number, end: number, callback?: (err: Error, res: number) => void): Pipeline;
 
